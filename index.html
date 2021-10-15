@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<title> SIRAL ID</title>
+</head>
+<script>
+  var subjectObject = {
+    "Jerman": {  
+    },
+    "Indonesia": {
+    }
+  }
+  window.onload = function() {
+    var subjectSel = document.getElementById("subject");
+    for (var x in subjectObject) {
+      subjectSel.options[subjectSel.options.length] = new Option(x, x);
+    }
+  }
+  </script>
+<body>
+
+<div class="row">
+<div class="col-50">
+    <div class="container" style="margin: 0 20%;">
+      <h4><i class="fa fa-arrow-left" style="margin-right:2%;"></i>
+        <i class="fa fa-product-hunt" style="font-size:24px"></i>
+        Powdur</h4>
+      <p style="color: grey;">Pure set</p>
+      <h2 style="margin-top: -15px;">$65.00</h2>
+      <img src="images/siral.PNG" alt="Produk" width="80%">
+    </div>
+  </div>
+
+
+  <div class="col-50">
+    <div class="container">
+      <form action="#">
+          <div class="col-50">
+            <button class="btn"><i class="fa fa-apple"></i> Pay</button>
+            <div class="garis">
+                <h6 style="color: grey;">Or Pay With Card</h6>
+            </div>
+            <h3>Shipping Information</h3>
+            <label for="email"> Email</label>
+            <input type="text" id="email" name="email">
+            <label for="adr"></i>Shipping Address</label>
+            <select name="subject" id="subject" class="select" style="margin-bottom: 0px;">
+              <option value="" selected="selected">United States</option>
+           </select>
+           <input type="text" id="name" name="name" placeholder="Name" style="margin-bottom: 0px;">
+            <input type="text" id="adr" name="address" placeholder="Address">
+            <a href="#" style="color: grey;"> Enter Address Manually</a>
+
+            <h3>Payment details</h3> 
+            <label for="ccnum">Card Information</label>
+            <div class="input-container">
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1234-1234-1234-1234" style="margin-bottom: 0; width: 70%;"> 
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+        </div>
+        </div>
+
+            <div class="row">
+              <div class="col-25">
+                <input type="text" id="expyear" name="expyear" placeholder="MM / YY">
+              </div>
+              <div class="col-25">
+                <div class="input-container">
+            <input type="text" id="CVC" name="CVC" placeholder="CVC" style="margin-bottom: 0; width: 70%;"> 
+            <div class="icon-container">
+              <i class="fa fa-credit-card-alt" style="color:navy;"></i> 
+              </div>
+              </div>
+            </div>
+        
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Billing address is same as shipping 
+        </label>
+        <input type="submit" value="Pay $65.00" class="btn">
+      </form>
+    </div>
+  </div>
+  
+
+</body>
+</html>
